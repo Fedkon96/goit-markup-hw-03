@@ -102,7 +102,7 @@ img {
   border-bottom: 1px solid #e7e9fc;
 }
 
-.flex-container {
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
