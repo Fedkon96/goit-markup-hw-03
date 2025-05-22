@@ -78,7 +78,7 @@ img {
   overflow: hidden;
 }
 
-.w1158 {
+.width-container {
   width: 1158px;
   margin-left: auto;
   margin-right: auto;
@@ -86,7 +86,7 @@ img {
   padding-right: 15px;
 }
 
-.mb-8 {
+.margin-b {
   margin-bottom: 8px;
 }
 
@@ -98,10 +98,11 @@ img {
 
 /* !header */
 .page-header {
+  padding: 188px 0;
   border-bottom: 1px solid #e7e9fc;
 }
 
-.container {
+.flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -198,16 +199,8 @@ img {
   margin: 0 auto;
 }
 
-.hero-wrapper {
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
-}
-
-.title-page {
+.hero-title {
+  max-width: 496px;
   font-size: 56px;
   line-height: 1.1;
   letter-spacing: 0.02em;
@@ -216,21 +209,24 @@ img {
   width: 550px;
 }
 
-.btn-service {
+.hero-btn {
+  display: block;
   min-width: 169px;
+  height: 56px;
+  border: none;
+  cursor: pointer;
   padding: 10px;
   border: 1px solid #000;
   border-radius: 4px;
   width: 169px;
   height: 56px;
-  display: inline-block;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white-color);
-  background-color: #4d5ae5;
+  background-color: var(--iris-color);
 }
 
 .btn-service:hover,
@@ -249,6 +245,10 @@ img {
 .about-product-list {
   display: flex;
   gap: 24px;
+}
+
+.about-product-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .card-title {
@@ -272,7 +272,7 @@ img {
 }
 /* finish section about the product */
 
-/* start section teamwork */
+/* !start section teamwork */
 .teamwork {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -299,6 +299,11 @@ img {
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background-color: #ffffff;
+}
+
+.teamwork-box {
+  padding: 32px 0
+  }
 
 }
 
@@ -307,7 +312,7 @@ img {
 /* !start section portfolio */
 
 .portfolio {
-  padding-top: 60px;
+  padding-top: 120px;
   padding-bottom: 120px;
 }
 
@@ -350,7 +355,7 @@ padding: 32px 16px;
 }
 
 footer .logo {
-  display: block;
+  display: inline-block;
   margin-bottom: 16px;
 }
 
