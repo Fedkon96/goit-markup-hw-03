@@ -7,7 +7,7 @@
   --iris-accent-color: #4d5ae5;
   --ocean-color: #404bbf;
   --navy-blue-color: #2e2f42;
-  --cloud-background-color: #f4f4fd;
+  --cloud-color: #f4f4fd;
 }
 
 /* --iris: #4d5ae5;
@@ -38,7 +38,7 @@ p {
   margin: 0;
 }
 
-/* base style */
+/* ?base style */
 body {
   font-family: var(--main-font);
   font-size: var(--main-size);
@@ -65,6 +65,8 @@ img {
   display: block;
 }
 
+/* ?default class */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -87,10 +89,6 @@ img {
   padding-right: 15px;
 }
 
-.margin-b {
-  margin-bottom: 8px;
-}
-
 /* finish basic styles */
 
 /* !header */
@@ -98,7 +96,7 @@ img {
   border-bottom: 1px solid #e7e9fc;
 }
 
-.flex-container {
+.flex-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,16 +106,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.naw-list-wrapper {
-  display: flex;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
 }
 
 .logo {
@@ -141,6 +129,11 @@ img {
   color: var(--navy-blue-color);
 }
 
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
 .nav-item {
   display: flex;
 }
@@ -156,33 +149,26 @@ img {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #404bbf;
-}
-
-.address-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.address-item {
-  display: flex;
+  color: var(--ocean-color);
 }
 
 .connection {
   font-style: normal;
 }
 
+.address-list {
+  display: flex;
+  gap: 40px;
+}
+
 .address-link {
-  font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: var(--main-color-slate);
 }
 
 .address-link:hover,
 .address-link:focus {
-  color: #404bbf;
+  color: var(--ocean-color);
 }
 
 /* !start section Hero */
@@ -194,28 +180,23 @@ img {
 }
 
 .hero-title {
-  font-weight: 700;
   margin: 0 auto;
   max-width: 496px;
   font-size: 56px;
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #ffffff;
-  padding-bottom: 48px;
+  color: var(--white-color);
+  margin-bottom: 48px;
 }
 
 .hero-btn {
   margin: 0 auto;
-  display: block;
   min-width: 169px;
   height: 56px;
-  cursor: pointer;
   padding: 10px;
-  /* border: 1px solid #000; */
+  border: 1px solid #000;
   border-radius: 4px;
-  width: 169px;
-  height: 56px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -245,24 +226,19 @@ img {
   width: calc((100% - 72px) / 4);
 }
 
-.card-title {
+.about-product-title {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: var(--navy-blue-color);
 }
 
-.card-description {
-  font-weight: 400;
-  font-size: 16px;
+.about-product-description {
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
-}
-
-.center {
-  text-align: center;
+  color: var(--main-color-slate);
 }
 /* finish section about the product */
 
@@ -270,17 +246,15 @@ img {
 .teamwork {
   padding-top: 120px;
   padding-bottom: 120px;
-  background-color: #f4f4fd;
+  background-color: var(--cloud-color);
 }
 
 .teamwork-title {
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  text-transform: capitalize;
-  color: #2e2f42;
+  color: var(--navy-blue-color);
   margin-bottom: 72px;
 }
 
@@ -289,15 +263,32 @@ img {
   gap: 24px;
 }
 
-.card-item {
+.teamwork-item {
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  background-color: #ffffff;
+  background-color: var(--white-color);
 }
 
 .teamwork-box {
   padding: 32px 0;
+}
+
+.teamwork-sub-title {
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--navy-blue-color);
+}
+
+.teamwork-description {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--main-color-slate);
 }
 
 /* finish section teamwork */
@@ -312,6 +303,7 @@ img {
   margin-bottom: 72px;
   text-align: center;
   font-size: 36px;
+  color: var(--navy-blue-color);
 }
 
 .portfolio-list {
@@ -325,14 +317,6 @@ img {
   width: calc((100% - 48px) / 3);
 }
 
-.portfolio-item > .card-title {
-  padding-left: 16px;
-}
-
-.portfolio-item > .card-description {
-  padding-left: 16px;
-}
-
 .box-border-b-l-r {
   border-bottom: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
@@ -340,15 +324,27 @@ img {
   padding: 32px 16px;
 }
 
-.card-title {
+.portfolio-sub-title {
   margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue-color);
 }
+
+.portfolio-description {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--main-color-slate);
+}
+
 /* finish section portfolio */
 /* !Footer */
 .footer {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #2e2f42;
+  background-color: var(--navy-blue-color);
 }
 
 footer .logo {
@@ -357,14 +353,12 @@ footer .logo {
 }
 
 footer .color-change-cloud {
-  color: #f4f4fd;
+  color: var(--cloud-color);
 }
 
 .footer-text {
   width: 264px;
-  font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #f4f4fd;
+  color: var(--cloud-color);
 }
